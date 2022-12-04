@@ -17,3 +17,8 @@ h1 {
 h2 {
     color: #ffda09;
 }
+
+.scroll {
+    background: rgb(99, 107, 0);
+    height: 400px;
+}

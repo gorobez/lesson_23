@@ -1,96 +1,100 @@
 "use strict"
 
-// console.log('35' + - "22");
-
-// console.log('35' * "22");
-
-// console.log('558' > 22++);
-
-/* let userCounter = 0;
- let newUser = userCounter++;
-
- console.log(newUser);
- console.log(userCounter); */
-
-//  console.log(!false && 11 || 18 && !'');
-
-/* let num = 0;
- console.log(num ?? "not name") */
-
-
-
-// ====================================================
-
-/* if (1 === '1') {
-    console.log("Правда");
-} */
-
-/* let message = (92 > '11' && 58 < 100) ? "Правда" : "Брехня";
-console.log(message); */
-
-
-// ====================================================
-
-
-/* let num = 8;
-
-while (num) {
-    console.log(num);
-    num--
-} */
-
-
-/* for (let num = 0; num <= 5; num++) {
-    console.log(num);
-}  */
-
-
-/* for (let num = 0; num < 3; num++) {
-    console.log(`Число: ${num}`);
+/* function showName() {
+    console.log("Vasa");
 }
+setTimeout(showName, 0);
+
+console.log("Kolya"); */
+
+// ========================================
+// Массиви в JAVASCRIPT.
+
+// Задача 1
+/* let arr = ['Vanya', 'Istvan', 'Olya',];
+let newArr = arr;
+newArr.push('Petya');
+console.log(newArr); */
 
 
-let num = 0;
+// Задача 2
+/* let users = ['Vanya', 'Istvan',];
 
-do {
-    console.log(`Число: ${num}`);
-    num++;
-} while (num < 3);  */
+users.push('Olya');
+console.log(users.indexOf('Istvan'));
+users[users.indexOf('Istvan')] = 'Petya';
 
+console.log(users.splice(0, 1));
 
+users.splice(0, 0, 'Masha', 'Pasha')
 
-/* first: for (let num = 0; num < 2; num++) {
-    for (let size = 0; size < 3; size++) {
-
-        if (size == 1) break first;
-        console.log(size);
-    }
-} */
+console.log(users);  */
 
 
-// ====================================================
+// Задача 3
+/* let arr = ['Vanya', 'Istvan', 'Olya',];
+let deleteUser = arr.splice(1, 1); */
 
-/* let numOne = Math.round((1.005 + Number.EPSILON) * 100) / 100;
-console.log(numOne); */
+// Задача 4
+/* let str = 'Vanya, Istvan, Olya';
+let arr = str.split();
+console.log(arr); */
+
+// ========================================
+// DOM.
+
+// Задача 1
+/* const element = document.querySelector('[data-say-hi]');
+console.log(element.dataset.sayHi); */
 
 
-/* let value = parseFloat("135.58px");
-console.log(value); */
+// Задача 2
+/* const nameUser = document.querySelectorAll('.users li')[1];
+console.log(nameUser); */
 
-/* let value = 58 + "Фрилансер";
 
-if (isNaN(value)) {
-    console.log('Результат виразу NaN');
-} */
+// Задача 3
+/* const likeElements = document.querySelectorAll('.like');
+console.log(likeElements); */
 
-// ====================================================
 
-/* let text = "фрилансер";
-console.log(text[5]) */
+// Задача 4
+/*  const list = document.querySelector('.users');
+list.insertAdjacentHTML(
+    'beforeend',
+    '<li>Text</li>'
+);  */
 
-/* let text = "фрилансер";
-console.log(text.toUpperCase()) */
 
-/* let text = "фрилансер";
-console.log(text.slice(3, 6)) */
+// =================================================================================
+// JavaScript размеры прокрутка и координаты элементов на странице и окна браузера..
+
+// Задача 1
+/* const mainElement = document.documentElement;
+const scrollWidth = window.innerWidth - mainElement.clientWidth;
+console.log(scrollWidth); ширина полоси прокрутки 17px */
+
+// Задача 2
+/*  function setScrollTo() {
+    window.scrollTo({
+        top: 100,
+        left: 0,
+        behsvior: "smooth"
+    });
+}
+setTimeout(setScrollTo, 1000); */
+
+
+// Задача 3
+
+/*  const box = document.querySelector('.scroll');
+const getBoxCoords = box.getBoundingClientRect();
+console.log(getBoxCoords);
+
+const listUsers = document.querySelector('.users');
+const listUsersCoordsTop = listUsers.getBoundingClientRect().top;
+console.log(listUsersCoordsTop);
+
+const listUsersDocumentCoordsTop = listUsersCoordsTop + window.pageYOffset;
+console.log(listUsersDocumentCoordsTop); */
 
